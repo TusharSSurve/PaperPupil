@@ -38,7 +38,7 @@ export default function ChatInput({ isDisabled }: ChatInputProps) {
               <Button
                 disabled={isDisabled || isLoading}
                 className='absolute bottom-1.5 right-[8px]'
-                aria-label='send message' type="submit"
+                aria-label='send message'
                 onClick={() => {
                   addMessage()
                   textareaRef.current?.focus()
