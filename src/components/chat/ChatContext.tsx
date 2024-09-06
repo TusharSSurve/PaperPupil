@@ -106,7 +106,9 @@ export const ChatContextProvider = ({ fileId, children }: Props) => {
         const { value, done: doneReading } = await reader.read()
         done = doneReading
         const chunkValue = decoder.decode(value)
-        accResponse += chunkValue
+        console.log(chunkValue.replaceAll('0:', ''));
+
+        accResponse += chunkValue.replaceAll('0:', '').replaceAll('"', '')
 
         // append chunk to the actual message
         utils.getFileMessages.setInfiniteData(

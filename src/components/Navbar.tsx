@@ -10,7 +10,7 @@ export default function Navbar() {
       <MaxWidthWrapper>
         <div className="flex h-14 items-center justify-between border-b border-zinc-200">
           <Link href="/" className="flex z-40 font-semibold">
-            <span>quill<span className="text-green-600">.</span>ai</span></Link>
+            <span>Paper<span className="text-green-600">Pupil</span></span></Link>
           <div className="hidden items-center space-x-4 sm:flex">
             <>
               <Link href="/pricing" className={buttonVariants({
