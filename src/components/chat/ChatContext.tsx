@@ -100,7 +100,7 @@ export const ChatContextProvider = ({ fileId, children }: Props) => {
       const decoder = new TextDecoder()
       let done = false
 
-      // accumulated response
+      // accumulated respons
       let accResponse = ''
       while (!done) {
         const { value, done: doneReading } = await reader.read()
