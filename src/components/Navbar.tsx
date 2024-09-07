@@ -13,10 +13,6 @@ export default function Navbar() {
             <span>Paper<span className="text-green-600">Pupil</span></span></Link>
           <div className="hidden items-center space-x-4 sm:flex">
             <>
-              <Link href="/pricing" className={buttonVariants({
-                variant: "ghost",
-                size: 'sm'
-              })}>Pricing</Link>
               <LoginLink className={buttonVariants({
                 variant: "ghost",
                 size: 'sm'
