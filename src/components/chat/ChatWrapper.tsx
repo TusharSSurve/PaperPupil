@@ -19,8 +19,8 @@ export default function ChatWrapper({ fileId }: ChatWrapperProps) {
       },
       {
         refetchInterval: (data) =>
-          data?.status === 'SUCCESS' ||
-            data?.status === 'FAILED'
+          // @ts-ignore
+          data?.status === 'SUCCESS' || data?.status === 'FAILED'
             ? false
             : 10000,
       }

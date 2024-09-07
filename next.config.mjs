@@ -1,5 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/sign-in',
+        destination: '/api/auth/login',
+        permanent: true
+      },
+      {
+        source: '/sign-up',
+        destination: '/api/auth/register',
+        permanent: true
+      }
+    ]
+  },
   webpack: (
     config,
     { buildId, dev, isServer, defaultLoaders, webpack }
@@ -8,6 +22,14 @@ const nextConfig = {
     config.resolve.alias.encoding = false
     return config
   },
+  images: {
+    remotePatterns: [
+      {
+        hostname: 'gravatar.com',
+        protocol: 'https'
+      }
+    ]
+  }
 };
 
 export default nextConfig;
